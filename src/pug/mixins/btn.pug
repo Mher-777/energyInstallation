@@ -1,0 +1,17 @@
+mixin btn(link = false, icon = "arrowRight")
+    if (link)
+        +b.A.js-btn.btn__(href=link)&attributes(attributes)
+            +e.SPAN.back.js-circles
+            +e.SPAN.text
+                if block
+                    block
+            if icon
+                +icon(icon)
+    else
+        +b.BUTTON.js-btn.btn__(type='button')&attributes(attributes)
+            +e.SPAN.back.js-circles
+            +e.SPAN.text
+                if block
+                    block
+            if icon
+                +icon(icon)

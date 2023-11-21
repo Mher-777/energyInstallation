@@ -1,0 +1,43 @@
+.hamburger {
+  border: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: .5rem;
+  position: relative;
+  background-color: transparent;
+  display: none;
+  @include large-tablet {
+    display: block;
+  }
+  @include large-mobile {
+    width: 3rem;
+    height: 3rem;
+    margin-left: .7rem;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    transition: all linear .2s;
+    fill: var(--color-white);
+    &-hamburgerOpen {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &.is-active {
+    .icon {
+      &-hamburgerOpen {
+        opacity: 1;
+        visibility: visible;
+      }
+      &-hamburgerClose {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}

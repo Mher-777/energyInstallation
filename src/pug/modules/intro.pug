@@ -1,0 +1,61 @@
+-
+    var settings = {
+        effect: "fade",
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            loop: true,
+        },
+        navigation: {
+            nextEl: ".slider-arrow_next",
+            prevEl: ".slider-arrow_prev",
+        },
+        pagination: {
+            el: ".intro__pagination",
+            clickable: true
+        },
+    }
+section.intro
+    .intro__wrapper
+        .swiper.intro__slider.js-slider.js-video-autoplay(data-settings=settings)
+            .swiper-wrapper
+                .swiper-slide
+                    .container
+                        .intro__slide
+                           .intro__bg.absolute
+                               video(preload="auto" autoplay="autoplay" no-controls muted playsinline="").video.js-video-slider
+                                   source(type="video/mp4" src="video-bg.mp4")
+                           .intro__content
+                               h1.intro__title.h1 Обеспечение <br> объектов энергетики
+                               .intro__info
+                                   p.intro__text Создание, проектирование, монтаж <br> и комплексное обеспечение энергетических объектов России
+                                   +link().intro__link подробнее
+                .swiper-slide
+                    .container
+                        .intro__slide
+                            .intro__bg.absolute
+                                img(src="/img/intro-bg-2.jpeg?mobile" alt="").object-fit
+                            .intro__content
+                                h2.intro__title.h1 Производство, поставка и монтаж энергосистем
+                                .intro__info
+                                    p.intro__text Осуществляем полный цикл производства энерго- и светотехнической продукции
+                                    +link().intro__link подробнее
+                .swiper-slide
+                    .container
+                        .intro__slide
+                            .intro__bg.absolute
+                                img(src="/img/intro-bg-3.jpeg?mobile" alt="").object-fit
+                            .intro__content
+                                h2.intro__title.h1 Строительство <br> и обеспечение энергообъектов
+                                .intro__info
+                                    p.intro__text Предлагаем качественные решения для любых промышленных работ
+                                    +link().intro__link подробнее
+            .slider-arrow.slider-arrow_next
+                +icon('arrowForward')
+            .slider-arrow.slider-arrow_prev
+                +icon('arrowForward')
+            .slider-pagination.intro__pagination
+    a(href="#").btn-more.intro__more подробнее о нас
+        img(src="/img/arrow-down.png").btn-more__icon

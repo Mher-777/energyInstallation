@@ -1,0 +1,88 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999;
+  transition: all linear .2s;
+  &.is-sticky {
+    background-color: var(--color-mirage);
+    .logo {
+      &__image {
+        width: 8.6rem;
+      }
+    }
+  }
+  &__inner {
+    padding: 2.4rem 6.8rem;
+    transition: all linear .2s;
+    flex-wrap: nowrap;
+    @include mackbook {
+      padding: 2.4rem 5rem;
+    }
+    @include large-tablet {
+      padding: 2rem;
+    }
+  }
+  &__logo {
+    margin-right: auto;
+  }
+  &__phone {
+    margin-left: auto;
+  }
+  &__phone,
+  &__email {
+    margin-right: 3.2rem;
+    @include large-desktop {
+      margin-right: 2.2rem;
+    }
+    @include large-mobile {
+      margin-right: .7rem;
+    }
+  }
+  &__btn {
+    @include large-tablet {
+      margin-top: 3rem;
+      width: 100%;
+    }
+  }
+  &__menu {
+    padding: 0 2rem 0 8rem;
+    @include mackbook {
+      padding: 0 2rem;
+    }
+    @include large-tablet {
+      position: absolute;
+      top: calc(100% + 1px);
+      border-top: 1px solid rgba(226, 226, 226, 0.30);
+      width: 100%;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all linear .2s;
+      background-color: var(--color-mirage);
+      padding: 3rem 2rem;
+      &.is-open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    @include large-tablet {
+      padding: 2rem;
+    }
+  }
+
+}
+
+html.open_menu {
+  body {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .header {
+    background-color: var(--color-mirage);
+  }
+}

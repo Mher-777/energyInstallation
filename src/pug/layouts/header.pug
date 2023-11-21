@@ -1,0 +1,48 @@
+header.header
+    .header__inner.flex.flex_vertical.flex_justify
+        .logo.header__logo
+            a(href="#").logo__link
+                img(src="app/img/logo.svg" alt="Энерго Строй Монтаж").logo__image
+        nav.menu.header__menu
+            ul.menu__list
+                li.is-active
+                    a(href="#") Главная
+                li
+                    a(href="#") О компании
+                li
+                    a(href="#") Услуги
+                    span.menu__icon.table-show.js-dropdown
+                        +icon('arrowForward')
+                    ul.dropdown
+                        li
+                            a(href="#") Проектирование
+                        li
+                            a(href="#") Строительно-монтажные работы
+                        li
+                            a(href="#") Строительство зданий
+                        li
+                            a(href="#") Производство
+                        li
+                            a(href="#") Аренда спецтехники
+                        li
+                            a(href="#") Комплексное обслуживание ж/д <br> и гражданских объектов
+                li
+                    a(href="#") Проекты
+                li
+                    a(href="#") Новости
+                li
+                    a(href="#") Контакты
+
+            +btn().header__btn.table-show Заказать звонок
+        a(href="tel:+78123749999").phone.header__phone.flex_inline.flex_vertical
+            .phone__icon
+                +icon('phone')
+            span.phone__text +7 (812) 374-99-99
+        a(href="mailto:info@energostm.ru").email.header__email.flex_inline.flex_vertical
+            .phone__icon
+                +icon('email')
+            span.phone__text info@energostm.ru
+        +btn().header__btn.table-hidden Заказать звонок
+        button.hamburger.js-hamburger
+            +icon('hamburgerOpen')
+            +icon('hamburgerClose')

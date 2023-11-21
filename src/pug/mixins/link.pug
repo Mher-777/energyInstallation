@@ -1,0 +1,6 @@
+mixin link(link = "#", icon = "arrowRight")
+    +b.A.link__(href=link)&attributes(attributes)
+        if block
+            block
+        if icon
+            +icon(icon)

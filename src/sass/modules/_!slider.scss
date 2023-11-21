@@ -1,0 +1,72 @@
+.slider-arrow {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(21, 23, 26, 0.50);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+  transition: all linear .2s;
+  &:hover {
+    background-color: var(--color-primary);
+  }
+  @include large-desktop {
+    width: 6rem;
+    height: 6rem;
+  }
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-white);
+  }
+  &_prev {
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+  &_next {
+    right: 0;
+  }
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.slider-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  span {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all linear .2s;
+    cursor: pointer;
+    pointer-events: auto;
+    &:not(:last-child) {
+      margin-right: .8rem;
+    }
+    &::before {
+      content: '';
+      width: .6rem;
+      height: .6rem;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+    }
+    &.swiper-pagination-bullet-active {
+      border-color: var(--color-primary);
+    }
+  }
+}
