@@ -55,6 +55,10 @@ body {
 		font-size: 1.6rem;
 	}
 
+	@include large-tablet {
+		font-size: 1.4rem;
+	}
+
 	@include large-mobile {
 		@include line-height(13, 17);
 	}
@@ -294,5 +298,42 @@ video::-webkit-media-controls {
 			background-color: var(--color-primary);
 			border-color: var(--color-primary);
 		}
+	}
+}
+
+.base-title {
+	position: relative;
+	&::before {
+		content: attr(data-sub-title);
+		font-size: 1.4rem;
+		white-space: nowrap;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: var(--color-silver-sand);
+		transform: rotate(-90deg) translateX(-100%);
+		display: inline-block;
+		transform-origin: top left;
+		position: absolute;
+		left: -9.6rem;
+		letter-spacing: 0.028rem;
+		@include large-desktop {
+			left: -5.5rem;
+		}
+		@include large-mobile {
+			font-size: 1rem;
+			left: 0;
+			transform: rotate(-90deg) translateX(-50%);
+			top: 50%;
+			letter-spacing: 0.02rem;
+			max-width: 11rem;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+	@include large-mobile {
+		display: flex;
+		align-items: center;
+		padding-left: 4.5rem;
+		min-height: 8rem;
 	}
 }

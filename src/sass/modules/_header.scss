@@ -63,13 +63,16 @@
       transition: all linear .2s;
       background-color: var(--color-mirage);
       padding: 3rem 2rem;
+
       &.is-open {
         opacity: 1;
         visibility: visible;
       }
     }
-    @include large-tablet {
+    @include large-mobile {
       padding: 2rem;
+      overflow-y: auto;
+      max-height: calc(100vh - 8rem);
     }
   }
 

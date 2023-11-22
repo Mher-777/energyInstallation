@@ -1,0 +1,54 @@
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  border: .5px solid var(--color-mercury);
+  @include large-mobile {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: calc(100% + 4rem);
+    padding: 0 2rem;
+    margin: 0 -2rem;
+    border: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__item {
+    width: 50%;
+    counter-increment: item;
+    padding: 2.4rem;
+    border: .5px solid var(--color-mercury);
+    color: var(--color-mine-shaft);
+    line-height: (24 / 17) * 1;
+    @include large-tablet {
+      padding: 1.5rem;
+    }
+    @include large-mobile {
+      padding: 2.4rem;
+      flex-shrink: 0;
+      width: 25.5rem;
+      border: 1px solid var(--color-mercury);
+      &:not(:first-child, :last-child) {
+        border-right-width: .5px;
+        border-left-width: .5px;
+      }
+    }
+    &:before {
+      counter-increment: li;
+      content: counter(item, decimal-leading-zero);
+      display: block;
+      @include line-height(36, 36);
+      font-weight: 500;
+      margin-bottom: .5rem;
+      color: var(--color-primary);
+      @include large-tablet {
+        @include line-height(25, 25);
+      }
+      @include large-mobile {
+        @include line-height(20, 20);
+      }
+    }
+
+  }
+}

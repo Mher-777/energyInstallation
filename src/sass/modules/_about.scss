@@ -1,0 +1,68 @@
+.about {
+  padding: 12rem 0;
+  @include large-desktop {
+    padding: 10rem 0;
+  }
+  @include large-tablet {
+    padding: 7rem 0;
+  }
+  @include large-mobile {
+    padding: 2rem 0;
+  }
+  &__inner {
+    @include large-mobile {
+      display: block;
+    }
+  }
+  &__cell {
+
+    &_left {
+      margin-right: 2rem;
+      width: 600 / 1280 * 100%;
+      @include large-tablet {
+        width: 385 / 952 * 100%;
+      }
+    }
+    &_right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 560 / 1280 * 100%;
+      @include large-tablet {
+        width: 530 / 952 * 100%;
+      }
+    }
+    @include large-mobile {
+      width: auto;
+      margin: 0;
+      overflow-x: hidden;
+      margin: 0 -2rem;
+      padding: 0 2rem;
+    }
+  }
+  &__image {
+    position: relative;
+    padding-top: 425 / 600 * 100%;
+    margin-top: 4rem;
+    @include large-mobile {
+      margin-top: 1rem;
+    }
+  }
+  &__steps {
+    margin-top: auto;
+  }
+  &__content {
+    color: var(--color-scorpion);
+    margin-bottom: 3rem;
+    h5 {
+      color: var(--color-bg);
+      margin-bottom: 2rem;
+    }
+    p {
+      margin-top: 1rem;
+    }
+    @include large-mobile {
+      padding-top: 2rem;
+    }
+  }
+}
