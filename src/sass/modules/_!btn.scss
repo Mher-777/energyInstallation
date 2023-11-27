@@ -3,7 +3,7 @@
   background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: 4.8rem;
-  padding: 1.2rem 2.4rem;
+  padding: 1rem 2.4rem;
   transition: 0.3s ease-out;
   overflow: hidden;
   position: relative;
@@ -14,8 +14,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 5rem;
-  border: none;
+  min-height: 4.6rem;
+  border: 2px solid transparent;
   &__back {
     position: absolute;
     left: -0.3rem;
@@ -28,6 +28,20 @@
   }
   &:hover {
     color: var(--color-bg);
+    background-color: transparent;
+  }
+
+  &_border {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    .b-circle {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-white);
+      border-color: transparent;
+    }
   }
 
   &__text {

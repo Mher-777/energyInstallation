@@ -1,0 +1,152 @@
+.advantages {
+  margin-bottom: 8rem;
+  @include large-tablet {
+    margin-bottom: 5rem;
+  }
+  @include large-mobile {
+    margin: 3rem 0;
+  }
+  &__inner {
+    position: relative;
+    margin-top: 8rem;
+    @include large-mobile {
+      margin-top: 3rem;
+    }
+  }
+  &__bg {
+    position: absolute;
+    padding-top: 736 / 1280 * 100%;
+    width: 1064 / 1280 * 100%;
+    bottom: -8rem;
+    right: -10.4rem;
+    z-index: -1;
+    &::after {
+      content: '';
+      position: absolute;
+      background: rgba(22, 32, 49, 0.60);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      @include large-mobile {
+        background: linear-gradient(180deg, rgba(22, 32, 49, 0.42) 0%, #162031 100%);
+      }
+    }
+    @include large-desktop {
+      right: -8rem
+    }
+    @include large-tablet {
+      margin: 0 -2rem;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: auto;
+      padding-top: 470 / 940 * 100%;
+    }
+
+    @include large-mobile {
+      padding-top: 400 / 375 * 100%;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    right: 0;
+    padding: 5.8rem 8.3rem;
+    color: var(--color-white);
+    @include large-tablet {
+      padding: 6rem 0;
+    }
+    @include large-mobile {
+      padding: 5.5rem 0 5rem;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    @include line-height(20, 32);
+    margin-bottom: 3rem;
+    @include large-tablet {
+      @include line-height(18, 28);
+    }
+    @include large-mobile {
+      @include line-height(13, 20);
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__info {
+    width: 560 / 1280 * 100%;
+    @include large-mobile {
+      width: 100%;
+    }
+  }
+
+  &__top {
+    &-title {
+      width: 540 / 1280 * 100%;
+      @include large-mobile {
+        width: 100%;
+        display: block;
+      }
+    }
+    @include large-mobile {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 3rem;
+    @include large-mobile {
+      margin: .8rem 0 0;
+    }
+  }
+
+  &__btn {
+    &:hover {
+      border-color: var(--color-primary);
+    }
+    @include large-mobile {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
+  &__link {
+    @include large-mobile {
+      width: 100%;
+    }
+  }
+
+  &__items {
+    @include large-tablet {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin: 0 -2rem;
+      padding: 0 2rem;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    width: 25%;
+    @include large-tablet {
+      flex-shrink: 0;
+      width: 27rem;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+    @include large-mobile {
+      width: 26rem;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

@@ -9,6 +9,11 @@ global.emittyChangedFile = {
 	stats: null,
 };
 
+global.app = {
+	isBuild: process.argv.includes('--build'),
+	isDev: !process.argv.includes('--build'),
+}
+
 // function to get tasks from gulp/tasks
 let getTask = (task) => {
 	return require("./gulp/tasks/" + task)(gulp, plugins, browserSync);

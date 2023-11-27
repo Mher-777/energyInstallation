@@ -70,6 +70,12 @@
 .h2,
 .content h2 {
 	@include line-height(72, 80);
+	@include large-tablet {
+		@include line-height(35, 40);
+	}
+	@include large-mobile {
+		@include line-height(20, 24);
+	}
 }
 
 .h3,

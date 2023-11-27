@@ -5,7 +5,7 @@
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            // pauseOnMouseEnter: true,
             loop: true,
         },
         navigation: {
@@ -19,7 +19,7 @@
     }
 section.intro
     .intro__wrapper
-        .swiper.intro__slider.js-slider.js-video-autoplay(data-settings=settings)
+        .swiper.intro__slider.js-slider-video.js-video-autoplay(data-settings=settings)
             .swiper-wrapper
                 .swiper-slide
                     .container
@@ -57,5 +57,5 @@ section.intro
             .slider-arrow.slider-arrow_prev
                 +icon('arrowForward')
             .slider-pagination.intro__pagination
-    a(href="#").btn-more.intro__more подробнее о нас
+    a(href="#section1").btn-more.intro__more.js-scroll подробнее о нас
         img(src="/img/arrow-down.png").btn-more__icon

@@ -12,7 +12,7 @@ module.exports = (gulp, plugins, browserSync) => {
 
 		return Promise.all([
 			new Promise((resolve, reject) => {
-				gulp.src(path.src.css)
+				gulp.src(path.src.css, {sourcemaps: app.isDev})
 					.pipe(plugins.sassGlob())
 					.pipe(
 						plugins.plumber({

@@ -69,4 +69,13 @@
       border-color: var(--color-primary);
     }
   }
+  &.swiper-pagination-bullets-dynamic {
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-start;
+    width: 6.5rem !important;
+    .swiper-pagination-bullet {
+      position: relative;
+    }
+  }
 }

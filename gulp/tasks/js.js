@@ -3,7 +3,8 @@
 // =========================================================
 
 let path = require("../settings/path.json"),
-	webpackStream = require("webpack-stream");
+	webpackStream = require("webpack-stream"),
+	strip = require("gulp-strip-comments");
 
 module.exports = (gulp, plugins, browserSync) => {
 	return () => {
@@ -12,33 +13,17 @@ module.exports = (gulp, plugins, browserSync) => {
 		var stream =
 			// -------------------------------------------- Start Task
 			gulp
-				.src(path.src.js)
+				.src(path.src.js, {sourcemaps: app.isDev})
 				.pipe(plugins.plumber({ errorHandler }))
 				.pipe(
 					webpackStream({
+						mode: app.isBuild ? "production" : "development",
 						output: {
 							filename: "app.js",
-						},
-						module: {
-							rules: [
-								{
-									test: /\.(js)$/,
-									exclude: /(node_modules)/,
-									loader: "babel-loader",
-									query: {
-										presets: ["env"],
-									},
-								},
-							],
-						},
-						externals: {
-							jquery: "jQuery",
-						},
-						optimization: {
-							minimize: false
-						},
+						}
 					})
 				)
+				.pipe(plugins.if(app.isDev, strip()))
 				.pipe(gulp.dest(path.build.js))
 				.pipe(
 					reload({

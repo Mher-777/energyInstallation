@@ -1,0 +1,44 @@
+.item {
+  padding: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 32rem;
+  min-height: 38.5rem;
+  background-color: var(--color-white);
+  border: .5px solid var(--color-mercury);
+  transition: all linear .2s;
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    .item__text {
+      color: var(--color-white);
+    }
+    .item__icon {
+      filter: brightness(0) invert(1);
+    }
+  }
+  @include large-tablet {
+    min-height: 30rem;
+    width: 26rem;
+    padding: 3.5rem;
+  }
+  @include large-mobile {
+    padding: 3rem;
+    min-height: 26rem;
+  }
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__text {
+    color: var(--color-dove-gray);
+    margin-bottom: 2rem;
+    transition: all linear .2s;
+  }
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: auto;
+    transition: all linear .2s;
+  }
+}

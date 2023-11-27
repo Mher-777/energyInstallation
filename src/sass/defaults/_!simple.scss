@@ -247,6 +247,11 @@ svg {
 	}
 }
 
+.color-blue {
+	color: var(--color-cyan);
+}
+
+
 video::-webkit-media-controls {
 	display: none;
 }

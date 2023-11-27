@@ -1,14 +1,14 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/effect-fade-element';
 var sliders = {
     selector: ".js-slider",
+    selectorVideo: ".js-slider-video",
 
     video: $('.js-video-slider')[0],
     autoPlay: '',
 
     swiper: '',
+    swiperVideo: '',
     settings: {
         modules: [],
         pagination: {
@@ -26,18 +26,20 @@ var sliders = {
         let current = Object.assign(clone, data);
         current.modules.push(Navigation, Pagination, EffectFade, Autoplay) // Добавляем Модули
 
-        sliders.swiper = new Swiper($(selector)[0], current)
-
         if ($(selector).hasClass('js-video-autoplay')) {
-            sliders.swiper.autoplay.stop()
-            sliders.swiper.on('slideChange', function (e) {
+            sliders.swiperVideo = new Swiper($(selector)[0], current)
+
+            sliders.swiperVideo.autoplay.stop()
+            sliders.swiperVideo.on('slideChange', function (e) {
                 if (e.activeIndex === 0) {
-                    sliders.swiper.autoplay.stop()
+                    sliders.swiperVideo.autoplay.stop()
                 } else {
-                    sliders.swiper.autoplay.start()
+                    sliders.swiperVideo.autoplay.start()
                 }
                 sliders.video.play();
             });
+        } else {
+            sliders.swiper = new Swiper($(selector)[0], current)
         }
 
         selector.addEventListener('touchstart', () => false, { passive: false })
@@ -47,9 +49,8 @@ var sliders = {
     playing: () => {
         setTimeout(function(){
             $('.js-video-slider')[0].play();
-            sliders.swiper.slideNext()
-            sliders.swiper.autoplay.start()
-            console.log('playing')
+            sliders.swiperVideo.slideNext()
+            sliders.swiperVideo.autoplay.start()
         }, 1);
     },
 
@@ -66,6 +67,10 @@ var sliders = {
             $(sliders.selector).each((i, el) => {
                 sliders.run(el);
             });
+
+            $(sliders.selectorVideo).each((i, el) => {
+                sliders.run(el);
+            });
         });
 
         $(window).bind('resize', function(e)
@@ -74,6 +79,9 @@ var sliders = {
             window.RT = setTimeout(function()
             {
                 $(sliders.selector).each((i, el) => {
+                    sliders.run(el);
+                });
+                $(sliders.selectorVideo).each((i, el) => {
                     sliders.run(el);
                 });
             }, 100);
