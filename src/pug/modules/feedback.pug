@@ -1,0 +1,13 @@
+section.feedback
+    .container
+        .feedback__top
+            h2.feedback__title.h3.base-title(data-sub-title="связаться с нами") Хотите задать вопрос?
+        .feedback__inner
+            form(action="#").feedback__form.js-validate
+                .feedback__row.flex
+                    +input(false, 'Ваше имя', 'name', false).feedback__field
+                    +input(false, 'Телефон', 'phone', false, 'js-mask-phone').feedback__field
+                    +input(false, 'Email', 'email', false, 'js-mask-email').feedback__field
+                    +input(false, 'Cообщение', 'message', false).feedback__field
+                    +btn(false, false)(type="submit")._border.feedback__btn Оставить заявку
+                span.feedback__text Нажимая на кнопку «Оставить заявку, Вы соглашаетесь на обработку персональных данных в соответствии с пользовательским соглашением

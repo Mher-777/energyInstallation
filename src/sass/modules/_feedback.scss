@@ -1,0 +1,59 @@
+.feedback {
+  background-color: #172031;
+  padding: 7rem 0;
+  @include large-tablet {
+    padding: 5rem 0;
+  }
+  @include large-mobile {
+    padding: 2rem 0;
+  }
+  &__title {
+    color: var(--color-white);
+    margin-bottom: 3rem;
+    &::before {
+      opacity: .5;
+    }
+    @include large-tablet {
+      margin-bottom: 2rem;
+    }
+    @include large-mobile {
+      margin-bottom: 2rem;
+      width: 20rem;
+      min-height: 11rem;
+    }
+  }
+  &__row {
+    margin-bottom: 2rem;
+  }
+  &__field {
+    margin-right: .8rem;
+    flex-grow: 1;
+    @include large-tablet {
+      width: calc(50% - .8rem);
+      flex-grow: 0;
+      margin-bottom: 1.2rem;
+    }
+    @include large-mobile {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+  &__btn {
+    @include large-tablet {
+      margin-top: 2rem;
+    }
+    @include large-mobile {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  &__text {
+    display: block;
+    font-size: 1.3rem;
+    color: rgba(185, 191, 195, 0.50);
+    @include large-mobile {
+      margin-top: 2rem;
+      @include line-height(12, 19)
+    }
+  }
+}
