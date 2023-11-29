@@ -1,0 +1,70 @@
+-
+    var achievementsSettings = {
+        slidesPerView: 'auto',
+        loop: true,
+        spaceBetween: 20,
+        freeMode: true,
+        pagination: {
+            el: ".achievements__pagination",
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+            clickable: true
+        },
+        breakpoints: {
+            580: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                loop: true,
+                freeMode: false
+            }
+        },
+    }
+section.achievements
+    .container
+        .achievements__top.flex.flex_justify.flex_bottom
+            h2.h4.base-title.achievements__title(data-sub-title="достижения") Наши достижения
+            .slider-pagination.achievements__pagination
+        .swiper.achievements__slider.js-slider(data-settings=achievementsSettings)
+            .swiper-wrapper
+                .swiper-slide
+                    a(href="#").achievements-item.achievements__item
+                        span.achievements-item__image
+                            img(src="/img/achievements-item-1.png" alt="#").object-fit
+                        span.achievements-item__content
+                            h3.achievements-item__title Диплом
+                            span.achievements-item__text За активное участие в фестивале энергосбережения
+                .swiper-slide
+                    a(href="#").achievements-item.achievements__item
+                        span.achievements-item__image
+                            img(src="/img/achievements-item-2.png" alt="#").object-fit
+                        span.achievements-item__content
+                            h3.achievements-item__title Благодарность
+                            span.achievements-item__text За большой вклад в организацию и проведение мероприятий
+                .swiper-slide
+                    a(href="#").achievements-item.achievements__item
+                        span.achievements-item__image
+                            img(src="/img/achievements-item-3.png" alt="#").object-fit
+                        span.achievements-item__content
+                            h3.achievements-item__title Диплом
+                            span.achievements-item__text За участие в организации проведения II всероссийского совещания центров энергосбережения
+                .swiper-slide
+                    a(href="#").achievements-item.achievements__item
+                        span.achievements-item__image
+                            img(src="/img/achievements-item-1.png" alt="#").object-fit
+                        span.achievements-item__content
+                            h3.achievements-item__title Диплом
+                            span.achievements-item__text За активное участие в фестивале энергосбережения
+                .swiper-slide
+                    a(href="#").achievements-item.achievements__item
+                        span.achievements-item__image
+                            img(src="/img/achievements-item-2.png" alt="#").object-fit
+                        span.achievements-item__content
+                            h3.achievements-item__title Благодарность
+                            span.achievements-item__text За большой вклад в организацию и проведение мероприятий
+                .swiper-slide
+                    a(href="#").achievements-item.achievements__item
+                        span.achievements-item__image
+                            img(src="/img/achievements-item-3.png" alt="#").object-fit
+                        span.achievements-item__content
+                            h3.achievements-item__title Диплом
+                            span.achievements-item__text За участие в организации проведения II всероссийского совещания центров энергосбережения

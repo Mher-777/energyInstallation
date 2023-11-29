@@ -1,0 +1,40 @@
+.achievements {
+  padding-top: 18rem;
+  @include large-desktop {
+    padding: 10rem 0;
+  }
+  @include large-tablet {
+    padding: 0;
+    margin: 7rem 0;
+  }
+  @include large-mobile {
+    margin: 2rem 0;
+  }
+  &__top {
+    margin-bottom: 6rem;
+    overflow-x: hidden;
+    @include large-mobile {
+      margin-bottom: 3rem;
+    }
+  }
+  &__title {
+    max-width: 80rem;
+    @include large-tablet {
+      max-width: 55rem;
+    }
+    @include large-mobile {
+      max-width: 25rem;
+    }
+  }
+  &__slider {
+    @include large-mobile {
+      margin: 0 -2rem;
+      padding: 0 2rem;
+    }
+    .swiper-slide {
+      @include large-mobile {
+        max-width: 27.5rem;
+      }
+    }
+  }
+}

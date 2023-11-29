@@ -1,0 +1,32 @@
+.requisites {
+  @include line-height(17, 27);
+  max-width: 78rem;
+  @include large-mobile {
+    @include line-height(13, 20);
+  }
+  &__item {
+    padding: 1.6rem 0;
+    display: flex;
+    @include large-mobile {
+      padding: .5rem 0;
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    min-width: 18.5rem;
+    margin-right: 1.5rem;
+    font-weight: 600;
+    color: var(--color-bg);
+    @include large-mobile {
+      min-width: 13rem;
+      max-width: 13rem;
+    }
+  }
+  &__text {
+    color: var(--color-dove-gray);
+    @include large-mobile {
+      flex-grow: 1;
+      max-width: 17rem;
+    }
+  }
+}

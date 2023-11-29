@@ -1,0 +1,41 @@
+.safety {
+  margin: 18rem 0 0;
+  padding-bottom: 18rem;
+  @include large-desktop {
+    margin: 15rem 0 0;
+    padding-bottom: 10rem;
+  }
+  @include large-tablet {
+    margin: 5rem 0 0;
+    padding-bottom: 5rem;
+  }
+  @include large-mobile {
+    margin: 3rem 0 0;
+    padding-bottom: 3rem;
+  }
+
+  &__cell {
+    flex: 1 1 auto;
+    &_left {
+      max-width: 50rem;
+    }
+    &_right {
+      max-width: 70.5rem;
+    }
+  }
+  &__map {
+    position: relative;
+    padding-top: 450 / 705 * 100%;
+    @include large-mobile {
+      padding-top: 450 / 335 * 100%;
+    }
+  }
+  &__contact {
+    &-item {
+      margin-bottom: 3rem;
+      @include large-mobile {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

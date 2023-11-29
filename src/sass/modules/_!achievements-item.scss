@@ -1,0 +1,58 @@
+.achievements-item {
+  width: 40rem;
+  display: block;
+  @include large-tablet {
+    width: 29.8rem;
+  }
+  @include large-mobile {
+    width: 27.5rem;
+  }
+  &__image {
+    padding-top: 540 / 400 * 100%;
+    position: relative;
+    border: 1px solid var(--color-mercury);
+    img {
+      width: calc(100% - 4.8rem);
+      height: calc(100% - 4.8rem);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include large-tablet {
+      padding-top: 300 / 293 * 100%;
+    }
+    @include large-mobile {
+      padding-top: 367 / 275 * 100%;
+    }
+  }
+  span {
+    display: block;
+  }
+  &__content {
+    padding: 2.5rem 0;
+    text-align: center;
+    @include large-mobile {
+      padding: 1rem 0;
+    }
+  }
+  &__text {
+    color: var(--color-dove-gray);
+  }
+  &__title {
+    font-weight: 500;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @include line-height(23, 27);
+    margin-bottom: .8rem;
+
+    @include large-tablet {
+      @include line-height(20, 24);
+    }
+
+    @include large-mobile {
+      @include line-height(13, 15);
+    }
+  }
+}

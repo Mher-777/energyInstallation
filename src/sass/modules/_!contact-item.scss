@@ -1,0 +1,40 @@
+.contact-item {
+  display: flex;
+  max-width: 47rem;
+  &__icon {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 1.6rem;
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 2px;
+    background-color: #E5EAED;
+    @include large-mobile {
+      width: 4rem;
+      height: 4rem;
+      padding: 1.1rem;
+    }
+  }
+  &__cell {
+    margin-left: 2rem;
+    flex-grow: 1;
+  }
+  &__title {
+    color: var(--color-dove-gray);
+    margin-bottom: .3rem;
+    display: block;
+  }
+  &__link {
+    font-weight: 600;
+    color: var(--color-bg);
+    transition: all linear .2s;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

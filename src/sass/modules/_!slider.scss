@@ -92,7 +92,7 @@
     .swiper-pagination-bullet {
       position: relative;
       &:not(.swiper-pagination-bullet-active-main) {
-        opacity: 0 !important;
+        transform: scale(0);
       }
     }
 

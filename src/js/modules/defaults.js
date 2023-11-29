@@ -26,6 +26,12 @@ var defaults = {
 				return false;
 			}
 		});
+
+		$('.js-accordion').on('click', function (e) {
+			e.preventDefault()
+			$(this).toggleClass('is-active')
+			$(this).siblings().slideToggle()
+		})
 	},
 
 	init: () => {
