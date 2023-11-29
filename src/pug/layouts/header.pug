@@ -5,11 +5,11 @@ header.header
                 img(src="app/img/logo.svg" alt="Энерго Строй Монтаж").logo__image
         nav.menu.header__menu
             ul.menu__list
-                li.is-active
-                    a(href="#") Главная
-                li
-                    a(href="#") О компании
-                li
+                li(class=(cur === "main" ? "is-active" : undefined))
+                    a(href="main.html") Главная
+                li(class=(cur === "about" ? "is-active" : undefined))
+                    a(href="about.html") О компании
+                li(class=(cur === "services" ? "is-active" : undefined))
                     a(href="#") Услуги
                     span.menu__icon.table-show.js-dropdown
                         +icon('arrowForward')
@@ -26,11 +26,11 @@ header.header
                             a(href="#") Аренда спецтехники
                         li
                             a(href="#") Комплексное обслуживание ж/д <br> и гражданских объектов
-                li
+                li(class=(cur === "projects" ? "is-active" : undefined))
                     a(href="#") Проекты
-                li
+                li(class=(cur === "news" ? "is-active" : undefined))
                     a(href="#") Новости
-                li
+                li(class=(cur === "contacts" ? "is-active" : undefined))
                     a(href="#") Контакты
 
             +btn().header__btn.table-show Заказать звонок

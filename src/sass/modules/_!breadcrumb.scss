@@ -1,0 +1,27 @@
+.breadcrumb {
+  margin-bottom: 3rem;
+  &__list {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    list-style: none;
+  }
+  &__item {
+    font-weight: 600;
+    color: rgba(#fff, .6);
+    letter-spacing: 0.028rem;
+    text-transform: uppercase;
+    &:not(:first-child) {
+      &::before {
+        content: '•';
+        font-size: 1.4rem;
+        margin: 0 1.6rem;
+        color: var(--color-white);
+      }
+    }
+
+    &_current {
+      color: var(--color-white);
+    }
+  }
+}

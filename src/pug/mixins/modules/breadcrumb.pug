@@ -1,0 +1,12 @@
+mixin breadcrumb(items, last = false)
+    +b.breadcrumb&attributes(attributes)
+        +e.UL.list
+            each item in items
+                +e.LI.item
+                    if (items.length === 1 && !last)
+                        +e.SPAN.link= item
+                    else
+                        +e.A(href="#").link= item
+            if last
+                +e.LI.item._current
+                    +e.SPAN.link= last

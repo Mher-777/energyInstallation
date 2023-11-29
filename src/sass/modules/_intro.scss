@@ -1,5 +1,35 @@
 .intro {
   position: relative;
+  &_light {
+    .intro__content {
+      min-height: 52rem;
+      display: block;
+      padding-bottom: 3rem;
+      @include large-mobile {
+        display: flex;
+        padding-bottom: 2rem;
+      }
+    }
+    .intro__breadcrumb {
+      @include large-mobile {
+        margin-top: auto;
+      }
+    }
+    .intro__title {
+      max-width: 100%;
+      @include large-mobile {
+        margin-top: 0;
+      }
+    }
+    .intro__bg {
+      &::after {
+        background: rgba(22, 32, 49, 0.10);
+        @include large-mobile {
+          background: rgba(22, 32, 49, 0.50);
+        }
+      }
+    }
+  }
   &__bg {
     z-index: -1;
     &::after {
@@ -11,9 +41,6 @@
       top: 0;
       left: 0;
     }
-  }
-  &__slide {
-
   }
   &__content {
     z-index: 1;

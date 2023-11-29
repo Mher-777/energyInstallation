@@ -20,6 +20,7 @@
   }
   &__top {
     margin-bottom: 6rem;
+    overflow-x: hidden;
     @include large-tablet {
       margin-bottom: 4rem;
     }

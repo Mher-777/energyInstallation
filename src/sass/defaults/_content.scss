@@ -14,6 +14,19 @@
 .content ul,
 .content ol {
 	list-style: none;
+	li {
+		margin-top: 1.5rem;
+		display: flex;
+		align-items: flex-start;
+		color: var(--color-dove-gray);
+		&::before {
+			content: '•';
+			color: var(--color-primary);
+			margin-right: 1.5rem;
+			font-size: 2.3rem;
+			line-height: 1em;
+		}
+	}
 }
 
 .content b,
@@ -30,6 +43,22 @@
 .a {
 }
 
+.content blockquote,
+.blockquote {
+	color: var(--color-dove-gray);
+	padding: 2.4rem;
+	background-color: #F2F5F8;
+	border-left: .4rem solid var(--color-cyan);
+	margin-top: 2rem;
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--color-bg);
+		margin-bottom: .8rem;
+	}
+}
+
 .h1,
 .content h1,
 .h2,
@@ -42,6 +71,7 @@
 .content h5,
 .h6,
 .content h6 {
+	color: var(--color-bg);
 	font-weight: 500;
 }
 
@@ -80,6 +110,18 @@
 
 .h3,
 .content h3 {
+	font-weight: 600;
+	@include line-height(50, 60);
+	@include large-tablet {
+		@include line-height(40, 48);
+	}
+	@include large-mobile {
+		@include line-height(26, 31);
+	}
+}
+
+.h4,
+.content h4 {
 	@include line-height(42, 50);
 	@include large-tablet {
 		@include line-height(30, 36);
@@ -87,10 +129,6 @@
 	@include large-mobile {
 		@include line-height(20, 24);
 	}
-}
-
-.h4,
-.content h4 {
 }
 
 .h5,

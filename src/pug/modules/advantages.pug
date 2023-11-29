@@ -1,10 +1,11 @@
 section.advantages
     .container
-        .advantages__top.flex.flex_justify
-            h2.h2.base-title.advantages__top-title(data-sub-title="преимущества") Реализуем проекты <span class="color-blue">с 2011 г</span>
-            .advantages__info
-                h5.h5.advantages__subtitle(data-da=".advantages__top-title, 580, last") Зарекомендовали себя, как надежного и ценного партнера на Российском рынке
-                +btn('#')(data-da=".advantages .container, 580, last").advantages__btn подробнее о компании
+        if (!advantagesLight)
+            .advantages__top.flex.flex_justify
+                h2.h2.base-title.advantages__top-title(data-sub-title="преимущества") Реализуем проекты <span class="color-blue">с 2011 г</span>
+                .advantages__info
+                    h5.h5.advantages__subtitle(data-da=".advantages__top-title, 580, last") Зарекомендовали себя, как надежного и ценного партнера на Российском рынке
+                    +btn('#')(data-da=".advantages .container, 580, last").advantages__btn подробнее о компании
         .advantages__inner
             .advantages__bg
                 img(src="/img/advantages-bg-1.jpeg?mobile" alt="").object-fit
@@ -40,6 +41,6 @@ section.advantages
                     .item__icon
                         +icon('spotlight')
                 .advantages__content(data-da=".advantages__inner, 980, last")
-                    h3.advantages__title.h3 Гарантия качества
+                    h3.advantages__title.h4 Гарантия качества
                     p.advantages__text Гарантируем высокий уровень качества нашей продукции и выполнения нами проектных <br> и монтажных работ
                     +btn('#')._border.advantages__link выполненные проекты

@@ -14,6 +14,9 @@
     .item__text {
       color: var(--color-white);
     }
+    .item__title {
+      color: inherit;
+    }
     .item__icon {
       filter: brightness(0) invert(1);
     }

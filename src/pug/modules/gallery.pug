@@ -1,0 +1,84 @@
+-
+    var gallerySettings = {
+        slidesPerView: 'auto',
+        loop: false,
+        spaceBetween: 20,
+        freeMode: true,
+        navigation: {
+            enabled: false
+        },
+        pagination: {
+            el: ".gallery__pagination",
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+            clickable: true
+        },
+        breakpoints: {
+            580: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".slider-arrow_next",
+                    prevEl: ".slider-arrow_prev",
+                    enabled: true
+                },
+                loop: true,
+                freeMode: false
+            }
+        },
+    }
+section.gallery
+    .container
+        .gallery__top.flex.flex_justify.flex_bottom
+            h2.h4.base-title.gallery__title(data-sub-title="галерея") Предлагаем комплексное обеспечение объектов энергетики
+            .slider-pagination.gallery__pagination
+        .gallery__wrapper
+            .swiper.gallery__slider.js-slider(data-settings=gallerySettings)
+                .swiper-wrapper
+                    .swiper-slide
+                        a(href="#").gallery-item.gallery__item
+                            span.gallery-item__image
+                                img(src="/img/gallery-item-1.jpeg" alt="#").object-fit
+                            span.gallery-item__content
+                                h3.gallery-item__title Проект 1
+                                span.gallery-item__text Ленинградская обл., Кингисеппский р-р, с.п. Котельское, ст. «Лужская»
+                    .swiper-slide
+                        a(href="#").gallery-item.gallery__item
+                            span.gallery-item__image
+                                img(src="/img/gallery-item-2.jpeg" alt="#").object-fit
+                            span.gallery-item__content
+                                h3.gallery-item__title Проект 2
+                                span.gallery-item__text Ленинградская обл., Кингисеппский р-р, с.п. Котельское, ст. «Лужская»
+                    .swiper-slide
+                        a(href="#").gallery-item.gallery__item
+                            span.gallery-item__image
+                                img(src="/img/gallery-item-3.jpeg" alt="#").object-fit
+                            span.gallery-item__content
+                                h3.gallery-item__title Проект 3
+                                span.gallery-item__text Ленинградская обл., Кингисеппский р-р, с.п. Котельское, ст. «Лужская»
+                    .swiper-slide
+                        a(href="#").gallery-item.gallery__item
+                            span.gallery-item__image
+                                img(src="/img/gallery-item-1.jpeg" alt="#").object-fit
+                            span.gallery-item__content
+                                h3.gallery-item__title Проект 1
+                                span.gallery-item__text Ленинградская обл., Кингисеппский р-р, с.п. Котельское, ст. «Лужская»
+                    .swiper-slide
+                        a(href="#").gallery-item.gallery__item
+                            span.gallery-item__image
+                                img(src="/img/gallery-item-2.jpeg" alt="#").object-fit
+                            span.gallery-item__content
+                                h3.gallery-item__title Проект 2
+                                span.gallery-item__text Ленинградская обл., Кингисеппский р-р, с.п. Котельское, ст. «Лужская»
+                    .swiper-slide
+                        a(href="#").gallery-item.gallery__item
+                            span.gallery-item__image
+                                img(src="/img/gallery-item-3.jpeg" alt="#").object-fit
+                            span.gallery-item__content
+                                h3.gallery-item__title Проект 3
+                                span.gallery-item__text Ленинградская обл., Кингисеппский р-р, с.п. Котельское, ст. «Лужская»
+            .gallery__arrows
+                .slider-arrow.slider-arrow_small.slider-arrow_next
+                    +icon('arrowForward')
+                .slider-arrow.slider-arrow_small.slider-arrow_prev
+                    +icon('arrowForward')

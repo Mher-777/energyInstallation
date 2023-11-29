@@ -31,6 +31,21 @@
   &_next {
     right: 0;
   }
+
+  &_small {
+    width: 6.4rem;
+    height: 6.4rem;
+    background-color: var(--color-mirage);
+    @include large-tablet {
+      width: 5rem;
+      height: 5rem;
+      background-color: rgba(#162031, .8);
+      .icon {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+    }
+  }
 }
 
 .swiper-slide {
@@ -73,9 +88,13 @@
     position: relative;
     overflow: hidden;
     justify-content: flex-start;
-    width: 6.5rem !important;
+    margin: 0px -5.4rem;
     .swiper-pagination-bullet {
       position: relative;
+      &:not(.swiper-pagination-bullet-active-main) {
+        opacity: 0 !important;
+      }
     }
+
   }
 }

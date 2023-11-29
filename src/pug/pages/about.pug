@@ -1,0 +1,12 @@
+extends ../layouts/base
+append vars
+	- title = 'О нас';
+	- var cur = "about"
+	- var breadcrumb = {items:['Главная'], last:'О нас'}
+	- var aboutContent = true
+	- var advantagesLight = true
+block content
+	include ../modules/introLight
+	include ../modules/about
+	include ../modules/advantages
+	include ../modules/gallery

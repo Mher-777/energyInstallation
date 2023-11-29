@@ -96,8 +96,7 @@ gulp.task(
 			"vendors"
 		),
 		"pageList",
-		"deploy",
-		"open"
+		"browserSync"
 	)
 );
 
