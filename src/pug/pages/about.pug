@@ -2,13 +2,51 @@ extends ../layouts/base
 append vars
 	- title = 'О нас';
 	- var cur = "about"
+	- var galleryImages = ['gallery-item-1.jpeg', 'gallery-item-2.jpeg', 'gallery-item-3.jpeg']
 	- var breadcrumb = {items:['Главная'], last:'О нас'}
+	- var intro = {image: 'intro-bg-4.jpeg?mobile', title: 'Ведущая компания по созданию <br> и обеспечению объектов энергетики <br> в Санкт-Петербурге'}
 	- var aboutContent = true
 	- var advantagesLight = true
+	-
+		var items = [
+			{
+				title: 'Прозрачное ценообразование',
+				text: 'Предлагаем выгодные ценовые решения для клиентов, учитывая их потребности и возможности',
+				icon: 'tag'
+			},
+			{
+				title: 'Квалифицированные специалисты',
+				text: 'У нас работают специалисты с высокой профессиональной квалификацией и большим опытом в проектировании и монтаже энергосетей',
+				icon: 'success'
+			},
+			{
+				title: 'Весь спектр работ',
+				text: 'Осуществляем весь комплекс необходимых работ с экономией времени и денег клиента',
+				icon: 'underConstruction'
+			},
+			{
+				title: 'Системы безопасности',
+				text: 'Осуществляем производство и поставку приборов и систем пожарной сигнализации',
+				icon: 'fireAlarm'
+			},
+			{
+				title: 'Богатое портфолио',
+				text: 'Имеем портфолио выполненных проектов, с которым может ознакомится каждый наш клиент',
+				icon: 'presentation'
+			},
+			{
+				title: 'Производство светотехнической продукции',
+				text: 'Осуществляем полный цикл производства светотехнической продукции по выгодным ценам',
+				icon: 'spotlight'
+			}
+		]
 block content
 	include ../modules/introLight
 	include ../modules/about
-	include ../modules/advantages
+	+advantages({name: 'Реализуем проекты <span class="color-blue">с 2011 г</span>', sub: 'преимущества'}, 'Зарекомендовали себя, как надежного и ценного партнера на Российском рынке', 'подробнее о компании', 'advantages-bg-1.jpeg?mobile', items)
+		h3.advantages__title.h4 Гарантия качества
+		p.advantages__text Гарантируем высокий уровень качества нашей продукции и выполнения нами проектных <br> и монтажных работ
+		+btn('#')._border.advantages__link выполненные проекты
 	include ../modules/gallery
 	include ../modules/achievements
 	include ../modules/safety

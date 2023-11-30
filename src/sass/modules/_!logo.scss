@@ -1,15 +1,17 @@
 .logo {
+  fill: var(--color-white);
   &__link {
     display: inline-block;
-  }
-  &__image {
-    width: 13rem;
-    transition: all linear .2s;
-    @include large-tablet {
-      width: 10rem;
-    }
-    @include large-mobile {
-      width: 5.6rem;
-    }
+     & > * {
+       width: 13rem;
+       transition: all linear .2s;
+       fill: inherit;
+       @include large-tablet {
+         width: 10rem;
+       }
+       @include large-mobile {
+         width: 5.6rem;
+       }
+     }
   }
 }

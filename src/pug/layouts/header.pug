@@ -1,8 +1,9 @@
-header.header
+header.header(class=header_class)
     .header__inner.flex.flex_vertical.flex_justify
         .logo.header__logo
             a(href="#").logo__link
-                img(src="app/img/logo.svg" alt="Энерго Строй Монтаж").logo__image
+                +icon('logo')
+                //img(src="app/img/logo.svg" alt="Энерго Строй Монтаж").logo__image
         nav.menu.header__menu
             ul.menu__list
                 li(class=(cur === "main" ? "is-active" : undefined))
@@ -10,22 +11,22 @@ header.header
                 li(class=(cur === "about" ? "is-active" : undefined))
                     a(href="about.html") О компании
                 li(class=(cur === "services" ? "is-active" : undefined))
-                    a(href="#") Услуги
+                    a(href="services.html") Услуги
                     span.menu__icon.table-show.js-dropdown
                         +icon('arrowForward')
                     ul.dropdown
                         li
-                            a(href="#") Проектирование
+                            a(href="services.html") Проектирование
                         li
-                            a(href="#") Строительно-монтажные работы
+                            a(href="services.html") Строительно-монтажные работы
                         li
-                            a(href="#") Строительство зданий
+                            a(href="services.html") Строительство зданий
                         li
-                            a(href="#") Производство
+                            a(href="production.html") Производство
                         li
-                            a(href="#") Аренда спецтехники
+                            a(href="rent.html") Аренда спецтехники
                         li
-                            a(href="#") Комплексное обслуживание ж/д <br> и гражданских объектов
+                            a(href="maintenance.html") Комплексное обслуживание ж/д <br> и гражданских объектов
                 li(class=(cur === "projects" ? "is-active" : undefined))
                     a(href="#") Проекты
                 li(class=(cur === "news" ? "is-active" : undefined))

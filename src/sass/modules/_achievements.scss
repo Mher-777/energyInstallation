@@ -12,9 +12,11 @@
   }
   &__top {
     margin-bottom: 6rem;
-    overflow-x: hidden;
     @include large-mobile {
       margin-bottom: 3rem;
+    }
+    @include large-tablet {
+      overflow-x: hidden;
     }
   }
   &__title {

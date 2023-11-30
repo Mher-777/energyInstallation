@@ -1,0 +1,23 @@
+mixin advantages(title, text, btn, bg = false, items = [])
+    section.advantages&attributes(attributes)
+        .container
+            if (!advantagesLight)
+                .advantages__top.flex.flex_justify
+                    h2.base-title.advantages__top-title(data-sub-title=`${title.sub}` class=title.tag) !{title.name}
+                    .advantages__info
+                        h5.h5.advantages__subtitle(data-da=".advantages__top-title, 580, last") !{text}
+                        +btn('#')(data-da=".advantages .container, 580, last").advantages__btn #{btn}
+            .advantages__inner
+                if (bg)
+                    .advantages__bg
+                        img(src=`/img/${bg}` alt="").object-fit
+                .advantages__items.flex
+                    each item, index in items
+                        .advantages__item.item
+                            h6.h6.item__title !{item.title}
+                            p.item__text !{item.text}
+                            .item__icon
+                                +icon(item.icon)
+                    if block
+                        .advantages__content(data-da=".advantages__inner, 980, last")
+                            block

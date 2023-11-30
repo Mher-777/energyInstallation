@@ -265,6 +265,10 @@ svg {
 	color: var(--color-cyan);
 }
 
+.color-white {
+	color: var(--color-white) !important;
+}
+
 
 video::-webkit-media-controls {
 	display: none;
@@ -296,6 +300,7 @@ video::-webkit-media-controls {
 			height: 2.4rem;
 			stroke: currentColor;
 			stroke-width: 2px;
+			transition: all linear .2s;
 		}
 		@include large-mobile {
 			width: 4rem;

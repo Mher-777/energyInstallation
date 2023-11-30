@@ -5,6 +5,10 @@
     align-items: center;
     overflow-x: auto;
     list-style: none;
+    white-space: nowrap;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &__item {
     font-weight: 600;

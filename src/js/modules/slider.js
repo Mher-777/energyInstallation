@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade, Autoplay, FreeMode } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Autoplay, FreeMode, HashNavigation } from 'swiper/modules';
 var sliders = {
     selector: ".js-slider",
     selectorVideo: ".js-slider-video",
@@ -14,6 +14,9 @@ var sliders = {
         pagination: {
             clickable: true
         },
+        hashNavigation: {
+            watchState: true,
+        }
     },
 
     build: (selector) => {
@@ -24,7 +27,7 @@ var sliders = {
         let clone = JSON.parse(JSON.stringify(sliders.settings));
 
         let current = Object.assign(clone, data);
-        current.modules.push(Navigation, Pagination, EffectFade, Autoplay, FreeMode) // Добавляем Модули
+        current.modules.push(Navigation, Pagination, EffectFade, Autoplay, FreeMode, HashNavigation) // Добавляем Модули
 
         if ($(selector).hasClass('js-video-autoplay')) {
             sliders.swiperVideo = new Swiper($(selector)[0], current)

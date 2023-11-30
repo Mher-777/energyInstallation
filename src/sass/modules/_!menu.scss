@@ -5,7 +5,7 @@
     list-style: none;
     & > li {
       font-weight: 500;
-      color: var(--color-white);
+      color: inherit;
       transition: all linear .2s;
       position: relative;
       &:not(:last-child) {

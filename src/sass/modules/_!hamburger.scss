@@ -22,7 +22,7 @@
     width: 80%;
     height: 80%;
     transition: all linear .2s;
-    fill: var(--color-white);
+    fill: currentColor;
     &-hamburgerOpen {
       opacity: 0;
       visibility: hidden;

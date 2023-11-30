@@ -1,0 +1,16 @@
+.catalog-item {
+  width: 62.5rem;
+  position: relative;
+  text-align: center;
+  &__image {
+    z-index: -1;
+  }
+  &__content {
+    min-height: 24.5rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+  }
+}

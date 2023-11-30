@@ -6,9 +6,19 @@
   width: 100%;
   z-index: 99999;
   transition: all linear .2s;
+  color: var(--color-white);
+  &_white {
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    .logo {
+      fill: var(--color-bg);
+    }
+  }
   &.is-sticky {
     background-color: var(--color-mirage);
+    color: var(--color-white);
     .logo {
+      fill: var(--color-white);
       &__image {
         width: 8.6rem;
       }
@@ -34,6 +44,12 @@
   &__phone,
   &__email {
     margin-right: 3.2rem;
+    color: inherit;
+    &:hover {
+      .icon {
+        stroke: var(--color-white)
+      }
+    }
     @include large-desktop {
       margin-right: 2.2rem;
     }
@@ -87,5 +103,8 @@ html.open_menu {
   }
   .header {
     background-color: var(--color-mirage);
+    @include large-tablet {
+      color: var(--color-white);
+    }
   }
 }

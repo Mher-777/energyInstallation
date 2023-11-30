@@ -2,7 +2,7 @@ section.intro.intro_light
     .intro__wrapper
         .container
             .intro__bg.absolute
-                img(src="/img/intro-bg-4.jpeg?mobile" alt="").object-fit
+                img(src=`/img/${intro.image}` alt="").object-fit
             .intro__content
                 +breadcrumb(breadcrumb.items, breadcrumb.last).intro__breadcrumb
-                h2.intro__title.h3 Ведущая компания по созданию <br> и обеспечению объектов энергетики <br> в Санкт-Петербурге
+                h2.intro__title.h3 !{intro.title}

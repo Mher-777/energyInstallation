@@ -1,0 +1,13 @@
+mixin services(image, title = {})
+    section.services&attributes(attributes)
+        .container
+            .services__inner.flex.flex_justify
+                .services__cell.services__cell_left
+                    h2.services__title.h4.base-title(data-sub-title=`${title.sub}`) #{title.name}
+                    if image
+                        .services__image
+                            img(src=`/img/${image}` alt="image").object-fit
+                .services__cell.services__cell_right
+                    .services__content.content
+                        if block
+                            block

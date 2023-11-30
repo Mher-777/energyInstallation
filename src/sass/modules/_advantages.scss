@@ -6,6 +6,9 @@
   @include large-mobile {
     margin: 3rem 0;
   }
+  &_margin {
+    margin-bottom: 0;
+  }
   &__top {
     margin-bottom: 8rem;
     @include large-mobile {
@@ -91,10 +94,13 @@
 
   &__top {
     &-title {
-      width: 540 / 1280 * 100%;
+      width: 620 / 1280 * 100%;
       @include large-mobile {
         width: 100%;
         display: block;
+        br {
+          display: none;
+        }
       }
     }
     @include large-mobile {
