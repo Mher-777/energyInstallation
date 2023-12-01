@@ -86,7 +86,7 @@ var forms = {
 	},
 
 	events: () => {
-		$(".input__field")
+		$(".input__field, .textarea__field")
 			.on("focus", (e) => {
 				let $input = $(e.target);
 				$input.parent().addClass("is-focus");

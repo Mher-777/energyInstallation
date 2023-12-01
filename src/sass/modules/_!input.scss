@@ -1,4 +1,23 @@
-.input {
+.input,
+.textarea {
+  &_gray {
+    .input,
+    .textarea {
+      &__placeholder {
+        color: var(--color-dove-gray);
+      }
+      &__field {
+        border-bottom-color: rgba(21, 23, 26, 0.10);
+        color: var(--color-bg);
+      }
+    }
+  }
+  &_fluid {
+    width: calc(50% - 3rem);
+    @include large-mobile {
+      width: 100%;
+    }
+  }
   &__parent {
     position: relative;
     .error {
@@ -15,20 +34,26 @@
       text-overflow: ellipsis;
     }
     &.is-focus {
-      .input__placeholder {
-        opacity: 0;
-        visibility: hidden;
+      .input,
+      .textarea {
+        &__placeholder {
+          opacity: 0;
+          visibility: hidden;
+        }
       }
     }
     &.error {
-      .input__placeholder {
-        padding-bottom: 1rem;
-        color: var(--color-red);
-      }
-      .input__field {
-        color: var(--color-red);
-        border-color: var(--color-red);
-        padding-bottom: 1rem;
+      .input,
+      .textarea {
+        &__placeholder {
+          padding-bottom: 1rem;
+          color: var(--color-red);
+        }
+        &__field {
+          color: var(--color-red);
+          border-color: var(--color-red);
+          padding-bottom: 1rem;
+        }
       }
     }
   }
@@ -55,11 +80,29 @@
     color: var(--color-white);
     width: 100%;
     transition: all linear .2s;
+
     @include placeholder {
       display: none;
     }
     @include large-mobile {
       font-size: 1.3rem;
     }
+  }
+}
+.textarea {
+  &__field {
+    resize: none;
+    height: 20rem;
+    padding: 2rem 0;
+    @include large-tablet {
+      height: 15rem;
+    }
+    @include large-mobile {
+      height: 10rem;
+    }
+  }
+  &__placeholder {
+    top: 2rem;
+    transform: translateY(0);
   }
 }

@@ -1,6 +1,21 @@
 .contact-item {
-  display: flex;
   max-width: 47rem;
+  &_medium {
+    .contact-item__cell{
+      margin-left: 0;
+      margin-top: 3rem;
+      @include large-tablet {
+        margin-top: 1.5rem;
+      }
+    }
+    @include large-mobile {
+      display: flex;
+      .contact-item__cell{
+        margin-top: 0;
+        margin-left: 2rem;
+      }
+    }
+  }
   &__icon {
     width: 5.6rem;
     height: 5.6rem;

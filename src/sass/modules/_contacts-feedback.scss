@@ -1,0 +1,84 @@
+.contact-feedback {
+  padding: 12rem 0 18rem;
+  @include large-desktop {
+    padding: 10rem 0;
+  }
+  @include large-tablet {
+    padding: 7rem 0;
+  }
+  @include large-mobile {
+    padding: 2rem 0;
+  }
+  &__cell {
+    &_left {
+      width: 525 / 1280 * 100%;
+      @include large-tablet {
+        padding-right: 2rem;
+      }
+    }
+    &_right {
+      width: 636 / 1280 * 100%;
+    }
+    @include large-tablet {
+      flex: 1 1 auto;
+    }
+    @include large-mobile {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 5.5rem;
+    @include large-tablet {
+      margin-bottom: 4rem;
+    }
+    @include large-mobile {
+      margin-bottom: 2rem;
+    }
+  }
+  &__field {
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    &:not(.input_fluid) {
+      width: calc(100% - 3rem);
+      @include large-mobile {
+        width: 100%;
+      }
+    }
+    @include large-mobile {
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  &__tagline {
+    color: #999;
+    @include line-height(13, 20);
+    margin-bottom: 3rem;
+    @include large-mobile {
+      margin-bottom: 1rem;
+    }
+  }
+  &__fields {
+    margin-left: -3rem;
+    @include large-mobile {
+      margin-left: 0;
+    }
+  }
+  &__map {
+    position: relative;
+    padding-top: 596 / 636 * 100%;
+    @include large-tablet {
+      padding-top: 700 / 952 * 100%;
+    }
+    @include large-mobile {
+      padding-top: 450 / 335 * 100%;
+      margin-top: 2rem;
+    }
+  }
+  &__btn {
+    border: 2px solid var(--color-primary);
+    @include large-tablet {
+      width: 100%;
+    }
+  }
+}

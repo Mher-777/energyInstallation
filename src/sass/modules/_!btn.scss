@@ -44,6 +44,14 @@
     }
   }
 
+  &_primary {
+    color: var(--color-primary);
+  }
+
+  &_medium {
+    min-height: 5.6rem;
+  }
+
   &__text {
     position: relative;
     z-index: 4;
@@ -54,6 +62,7 @@
     height: 2.4rem;
     margin-left: .8rem;
     stroke: currentColor;
+    fill: transparent;
     z-index: 3;
   }
 }

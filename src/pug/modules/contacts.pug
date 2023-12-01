@@ -1,0 +1,33 @@
+section.contacts
+    .container
+        .contacts__top
+            h3.h3.base-title.contacts__title(data-sub-title="связаться с нами") Как с нами связаться:
+        .contacts__items.flex
+            .contact-item.contact-item_medium
+                .contact-item__icon
+                    +icon('phone')
+                .contact-item__cell
+                    span.contact-item__title Телефоны:
+                    a(href="tel:+78123749999").contact-item__link +7 (812) 374-99-99 <br>
+                    a(href="tel:+78124948815").contact-item__link +7 (812) 494-88-15 <br>
+                    a(href="tel:+78123749991").contact-item__link +7 (812) 374-99-91 <br>
+                    a(href="tel:+78123749979").contact-item__link +7 (812) 374-99-79
+            .contact-item.contact-item_medium
+                .contact-item__icon
+                    +icon('email')
+                .contact-item__cell
+                    span.contact-item__title Электронная почта:
+                    a(href="mailto:info@energostm.ru").contact-item__link info@energostm.ru
+            .contact-item.contact-item_medium
+                .contact-item__icon
+                    +icon('clock')
+                .contact-item__cell
+                    span.contact-item__title Режим работы:
+                    span.contact-item__link Пн-Пт: с 09:00 до 18:00
+            .contact-item.contact-item_medium
+                .contact-item__icon
+                    +icon('map')
+                .contact-item__cell
+                    span.contact-item__title Адрес:
+                    span.contact-item__link 194156, г. Санкт-Петербург, вн. тер. г. Муниципальный округ, Светлановское, пр-кт Энгельса, д. 27, лит. Ш
+        +btn('#', 'download')._border._medium._primary.contacts__btn Скачать Реквизиты

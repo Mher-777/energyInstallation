@@ -24,8 +24,10 @@
     "gulp-changed": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
     "gulp-cssmin": "^0.2.0",
+    "gulp-csso": "^4.0.1",
     "gulp-html-prettify": "0.0.1",
     "gulp-inject-string": "^1.1.2",
+    "gulp-jsbeautifier": "^3.0.1",
     "gulp-load-plugins": "^2.0.2",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
@@ -35,8 +37,11 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-comments": "^2.6.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
+    "gulp-uncss": "^1.0.6",
     "imagemin": "^7.0.1",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-jpegtran": "^6.0.0",
@@ -46,9 +51,7 @@
     "sass": "~1.26.11",
     "vinyl-ftp": "^0.6.1",
     "webpack": "^5.65.5",
-    "webpack-stream": "^7.0.0",
-    "gulp-strip-comments": "^2.6.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "emitty": "^1.4.0",

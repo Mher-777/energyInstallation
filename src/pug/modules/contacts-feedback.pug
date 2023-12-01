@@ -1,0 +1,16 @@
+section.contact-feedback
+    .container
+        .contact-feedback__inner.flex.flex_justify
+            .contact-feedback__cell.contact-feedback__cell_left
+                h3.h4.base-title.contact-feedback__title(data-sub-title="написать нам") Хотите задать вопрос?
+                form(action="").contact-feedback__form.js-validate
+                    .contact-feedback__fields.flex
+                        +input(false, 'Ваше имя', 'name', false)._gray.contact-feedback__field
+                        +input(false, 'Телефон', 'phone', false, 'js-mask-phone')._gray._fluid.contact-feedback__field
+                        +input(false, 'Email', 'email', false, 'js-mask-email')._gray._fluid.contact-feedback__field
+                        +textarea(false, 'Ваше сообщение', 'message', false)._gray.contact-feedback__field
+                    p.contact-feedback__tagline Нажимая на кнопку «Отправить заявку», Вы соглашаетесь на обработку персональных данных в соответствии с пользовательским соглашением
+                    +btn(false, false)(type="submit")._medium.contact-feedback__btn Отправить сообщение
+            .contact-feedback__cell.contact-feedback__cell_right
+                .contact-feedback__map
+                    iframe(src="https://yandex.ru/map-widget/v1/?ll=30.334166%2C60.006764&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjEzMDM4OTg5ElTQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9GA0L7RgdC_0LXQutGCINCt0L3Qs9C10LvRjNGB0LAsIDI30KgiCg1grPJBFe0GcEI%2C&z=16.94" frameborder="1" allowfullscreen="true").absolute

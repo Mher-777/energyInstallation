@@ -4,6 +4,8 @@ append vars
     - var cur = "services"
     - var breadcrumb = {items:['Главная', 'услуги'], last:'Аренда спецтехники'}
     - var intro = {image: 'intro-bg-7.jpeg', title: 'Предлагаем удобные условия аренды и качественное обслуживание <br> при минимальных расходах'}
+    - var galleryImages = ['gallery-item-7.jpeg', 'gallery-item-8.jpeg', 'gallery-item-9.jpeg']
+    - var galleryTitle = 'Наш автопарк спецтехники'
 block content
     include ../modules/introLight
     +services('services-3.jpeg', {sub:'спецтехника', name: 'Аренда спецтехники'})
@@ -27,3 +29,4 @@ block content
             li строительная люлька фасадная для монтажных работ и работ по фасаду;
             li автокран XCMG 25 тонн
         +btn() связаться с нами
+    include ../modules/gallery

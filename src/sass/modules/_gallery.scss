@@ -2,6 +2,9 @@
   padding-bottom: 10rem;
   position: relative;
   padding-top: 18rem;
+  &_padding {
+    padding-top: 0;
+  }
   @include large-desktop {
     padding: 10rem 0;
   }

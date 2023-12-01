@@ -1,0 +1,12 @@
+extends ../layouts/base
+append vars
+    - title = 'Проекты';
+    - var cur = "projects"
+    - var breadcrumb = {items:['Главная', 'Проекты'], last:'Железнодорожная станция «Лужская-Генеральная»'}
+    - var intro = {image: 'intro-bg-8.jpeg?mobile', title: 'Железнодорожная станция «Лужская-Генеральная»'}
+    - var galleryImages = ['gallery-item-7.jpeg', 'gallery-item-8.jpeg', 'gallery-item-9.jpeg']
+    - var galleryTitle = '1 этап: Строительство путей <br> на новой площадке'
+block content
+    include ../modules/introLight
+    include ../modules/project
+    include ../modules/gallery

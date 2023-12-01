@@ -1,0 +1,11 @@
+extends ../layouts/base
+append vars
+    - title = 'Контакты';
+    - var cur = "contacts"
+    - var intro = {image: 'intro-bg-9.jpeg?mobile', title: 'Контакты'}
+    - var breadcrumb = {items:['Главная'], last:'контакты'}
+    - var bottomForm = false
+block content
+    include ../modules/introLight
+    include ../modules/contacts
+    include ../modules/contacts-feedback

@@ -1,40 +1,108 @@
 .project {
-  padding-bottom: 12rem;
+  margin-top: 12rem;
   @include large-desktop {
-    padding-bottom: 10rem;
+    margin-top: 10rem ;
   }
   @include large-tablet {
-    padding-bottom: 7rem;
+    margin-top: 7rem;
   }
   @include large-mobile {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  &__inner {
+    position: relative;
+    &::before {
+      content: attr(data-sub-title);
+      font-size: 1.4rem;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--color-silver-sand);
+      transform: rotate(-90deg) translateX(-100%);
+      display: inline-block;
+      transform-origin: top left;
+      position: absolute;
+      left: -9.6rem;
+      letter-spacing: 0.028rem;
+      @include large-desktop {
+        left: -5.5rem;
+      }
+      @include large-mobile {
+        display: none;
+      }
+    }
+  }
+  &__blockquote {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__image {
+    position: relative;
+    padding-top: 540 / 820 * 100%;
+    margin-bottom: 4rem;
+    @include large-mobile {
+      margin-bottom: 2rem;
+    }
+  }
+  &__content {
+    width: 820 / 1280 * 100%;
+    margin-right: 2rem;
     padding-bottom: 2rem;
-  }
-  &__subtitle {
-    display: inline-block;
-    max-width: 56rem;
-    vertical-align: top;
-    @include large-tablet {
-      max-width: 36rem;
+    h4 {
+      @include line-height(23,27);
+      font-weight: 500;
+      color: var(--color-bg);
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+      @include large-mobile {
+        @include line-height(16,19);
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+    }
+    p {
+      color: var(--color-dove-gray);
+      @include large-mobile {
+        margin-top: .5rem;
+      }
     }
     @include large-mobile {
-      display: block;
-      max-width: 100%;
-    }
-  }
-  &__title {
-    display: inline-block;
-    max-width: 60rem;
-    margin-right: 11rem;
-    margin-bottom: 6rem;
-    @include large-tablet {
-      margin-right: 5rem;
-      margin-bottom: 3rem;
-      max-width: 50rem;
-    }
-    @include large-mobile {
-      display: block;
-      max-width: 100%;
       margin-right: 0;
+      width: 100%;
     }
+  }
+  &__aside {
+    width: 340 / 1280 * 100%;
+    @include large-tablet {
+      width: 310 / 940 * 100%;
+    }
+    @include large-mobile {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 2.4rem;
+  }
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 2.4rem;
+      margin-bottom: 2.4rem;
+      border-bottom: 1px solid var(--color-mercury);
+    }
+  }
+  &__name {
+    display: block;
+    margin-bottom: .5rem;
+    color: var(--color-dove-gray);
+  }
+  &__number {
+    margin-top: .5rem;
+  }
+  &__text {
+    color: var(--color-bg);
   }
 }

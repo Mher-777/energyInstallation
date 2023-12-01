@@ -24,6 +24,7 @@ module.exports = (gulp, plugins, browserSync) => {
 					})
 				)
 				.pipe(plugins.if(app.isDev, strip()))
+				.pipe(plugins.if(!app.isDev, plugins.jsbeautifier()))
 				.pipe(gulp.dest(path.build.js))
 				.pipe(
 					reload({
