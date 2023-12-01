@@ -1,0 +1,15 @@
+.page {
+  margin-top: 13rem;
+  padding: 6rem 0 12rem;
+  @include large-desktop {
+    padding: 4rem 0 10rem;
+  }
+  @include large-tablet {
+    margin-top: 10rem;
+    padding: 4rem 0 7rem;
+  }
+  @include large-mobile {
+    margin-top: 8rem;
+    padding: 2rem 0;
+  }
+}
