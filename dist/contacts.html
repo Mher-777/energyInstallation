@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./app/css/app.css?v=1701427475510">
+    <script>
+        function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
+    </script>
+</head>
+
+<body class="page-contacts">
+    <header class="header">
+        <div class="header__inner flex flex_vertical flex_justify">
+            <div class="logo header__logo">
+                <a class="logo__link" href="#">
+                    <svg class="icon icon-logo" viewBox="0 0 128 80">
+                        <use xlink:href="app/icons/sprite.svg#logo"></use>
+                    </svg>
+                    <!--img(src="app/img/logo.svg" alt="Энерго Строй Монтаж").logo__image-->
+                </a>
+            </div>
+            <nav class="menu header__menu">
+                <ul class="menu__list">
+                    <li><a href="main.html">Главная</a>
+                    </li>
+                    <li><a href="about.html">О компании</a>
+                    </li>
+                    <li><a href="services.html">Услуги</a><span class="menu__icon table-show js-dropdown"><svg class="icon icon-arrowForward" viewBox="0 0 24 24"><use xlink:href="app/icons/sprite.svg#arrowForward"></use></svg></span>
+                        <ul class="dropdown">
+                            <li><a href="services.html">Проектирование</a>
+                            </li>
+                            <li><a href="services.html">Строительно-монтажные работы</a>
+                            </li>
+                            <li><a href="services.html">Строительство зданий</a>
+                            </li>
+                            <li><a href="production.html">Производство</a>
+                            </li>
+                            <li><a href="rent.html">Аренда спецтехники</a>
+                            </li>
+                            <li><a href="maintenance.html">Комплексное обслуживание ж/д <br> и&nbsp;гражданских объектов</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="projects.html">Проекты</a>
+                    </li>
+                    <li><a href="page.html">Новости</a>
+                    </li>
+                    <li class="is-active"><a href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+                <button class="js-btn btn header__btn table-show" type="button"><span class="btn__back js-circles"></span><span class="btn__text">Заказать звонок</span>
+                    <svg class="icon icon-arrowRight" viewBox="0 0 24 24">
+                        <use xlink:href="app/icons/sprite.svg#arrowRight"></use>
+                    </svg>
+                </button>
+            </nav>
+            <a class="phone header__phone flex_inline flex_vertical" href="tel:+78123749999">
+                <div class="phone__icon">
+                    <svg class="icon icon-phone" viewBox="0 0 24 24">
+                        <use xlink:href="app/icons/sprite.svg#phone"></use>
+                    </svg>
+                </div><span class="phone__text">+7 (812) 374-99-99</span>
+            </a>
+            <a class="email header__email flex_inline flex_vertical" href="mailto:info@energostm.ru">
+                <div class="phone__icon">
+                    <svg class="icon icon-email" viewBox="0 0 24 24">
+                        <use xlink:href="app/icons/sprite.svg#email"></use>
+                    </svg>
+                </div><span class="phone__text">info@energostm.ru</span>
+            </a>
+            <button class="js-btn btn header__btn table-hidden" type="button"><span class="btn__back js-circles"></span><span class="btn__text">Заказать звонок</span>
+                <svg class="icon icon-arrowRight" viewBox="0 0 24 24">
+                    <use xlink:href="app/icons/sprite.svg#arrowRight"></use>
+                </svg>
+            </button>
+            <button class="hamburger js-hamburger">
+                <svg class="icon icon-hamburgerOpen" viewBox="0 0 22 21">
+                    <use xlink:href="app/icons/sprite.svg#hamburgerOpen"></use>
+                </svg>
+                <svg class="icon icon-hamburgerClose" viewBox="0 0 26 19">
+                    <use xlink:href="app/icons/sprite.svg#hamburgerClose"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main class="wrapper">
+        <section class="intro intro_light">
+            <div class="intro__wrapper">
+                <div class="container">
+                    <div class="intro__bg absolute">
+                        <picture>
+                            <source type="image/webp" media="(max-width:580px)" srcset="app/img/intro-bg-9_mobile.webp">
+                                <source media="(max-width:580px)" srcset="app/img/intro-bg-9_mobile.webp">
+                                    <img src="app/img/intro-bg-9.jpeg" class="object-fit" alt="" />
+                        </picture>
+                    </div>
+                    <div class="intro__content">
+                        <div class="breadcrumb intro__breadcrumb">
+                            <ul class="breadcrumb__list">
+                                <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Главная</a>
+                                </li>
+                                <li class="breadcrumb__item breadcrumb__item_current"><span class="breadcrumb__link">контакты</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="intro__title h3">Контакты</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__top">
+                    <h3 class="h3 base-title contacts__title" data-sub-title="связаться с&nbsp;нами">Как с&nbsp;нами связаться:</h3>
+                </div>
+                <div class="contacts__items flex">
+                    <div class="contact-item contact-item_medium">
+                        <div class="contact-item__icon">
+                            <svg class="icon icon-phone" viewBox="0 0 24 24">
+                                <use xlink:href="app/icons/sprite.svg#phone"></use>
+                            </svg>
+                        </div>
+                        <div class="contact-item__cell"><span class="contact-item__title">Телефоны:</span><a class="contact-item__link" href="tel:+78123749999">+7 (812) 374-99-99 <br></a><a class="contact-item__link" href="tel:+78124948815">+7 (812) 494-88-15 <br></a><a class="contact-item__link"
+                            href="tel:+78123749991">+7 (812) 374-99-91 <br></a><a class="contact-item__link" href="tel:+78123749979">+7 (812) 374-99-79</a>
+                        </div>
+                    </div>
+                    <div class="contact-item contact-item_medium">
+                        <div class="contact-item__icon">
+                            <svg class="icon icon-email" viewBox="0 0 24 24">
+                                <use xlink:href="app/icons/sprite.svg#email"></use>
+                            </svg>
+                        </div>
+                        <div class="contact-item__cell"><span class="contact-item__title">Электронная почта:</span><a class="contact-item__link" href="mailto:info@energostm.ru">info@energostm.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item contact-item_medium">
+                        <div class="contact-item__icon">
+                            <svg class="icon icon-clock" viewBox="0 0 24 24">
+                                <use xlink:href="app/icons/sprite.svg#clock"></use>
+                            </svg>
+                        </div>
+                        <div class="contact-item__cell"><span class="contact-item__title">Режим работы:</span><span class="contact-item__link">Пн-Пт: с&nbsp;09:00 до&nbsp;18:00</span>
+                        </div>
+                    </div>
+                    <div class="contact-item contact-item_medium">
+                        <div class="contact-item__icon">
+                            <svg class="icon icon-map" viewBox="0 0 24 24">
+                                <use xlink:href="app/icons/sprite.svg#map"></use>
+                            </svg>
+                        </div>
+                        <div class="contact-item__cell"><span class="contact-item__title">Адрес:</span><span class="contact-item__link">194156, г. Санкт-Петербург, вн. тер. г. Муниципальный округ, Светлановское, пр-кт Энгельса, д. 27, лит. Ш</span>
+                        </div>
+                    </div>
+                </div><a class="js-btn btn btn_border btn_medium btn_primary contacts__btn" href="#"><span class="btn__back js-circles"></span><span class="btn__text">Скачать Реквизиты</span><svg class="icon icon-download" viewBox="0 0 24 24"><use xlink:href="app/icons/sprite.svg#download"></use></svg></a>
+            </div>
+        </section>
+        <section class="contact-feedback">
+            <div class="container">
+                <div class="contact-feedback__inner flex flex_justify">
+                    <div class="contact-feedback__cell contact-feedback__cell_left">
+                        <h3 class="h4 base-title contact-feedback__title" data-sub-title="написать нам">Хотите задать вопрос?</h3>
+                        <form class="contact-feedback__form js-validate" action="">
+                            <div class="contact-feedback__fields flex">
+                                <div class="input input_gray contact-feedback__field">
+                                    <div class="input__parent"><span class="input__placeholder">Ваше имя</span>
+                                        <input class="input__field" name="name" type="text" />
+                                    </div>
+                                </div>
+                                <div class="input input_gray input_fluid contact-feedback__field">
+                                    <div class="input__parent"><span class="input__placeholder">Телефон</span>
+                                        <input class="input__field js-mask-phone" name="phone" type="text" />
+                                    </div>
+                                </div>
+                                <div class="input input_gray input_fluid contact-feedback__field">
+                                    <div class="input__parent"><span class="input__placeholder">Email</span>
+                                        <input class="input__field js-mask-email" name="email" type="text" />
+                                    </div>
+                                </div>
+                                <div class="textarea textarea_gray contact-feedback__field">
+                                    <div class="textarea__parent"><span class="textarea__placeholder">Ваше сообщение</span>
+                                        <textarea class="textarea__field" name="message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="contact-feedback__tagline">Нажимая на&nbsp;кнопку «Отправить заявку», Вы соглашаетесь на&nbsp;обработку персональных данных в&nbsp;соответствии с&nbsp;пользовательским соглашением</p>
+                            <button class="js-btn btn btn_medium contact-feedback__btn" type="submit"><span class="btn__back js-circles"></span><span class="btn__text">Отправить сообщение</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-feedback__cell contact-feedback__cell_right">
+                        <div class="contact-feedback__map">
+                            <iframe class="absolute" src="https://yandex.ru/map-widget/v1/?ll=30.334166%2C60.006764&amp;mode=search&amp;ol=geo&amp;ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjEzMDM4OTg5ElTQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9GA0L7RgdC_0LXQutGCINCt0L3Qs9C10LvRjNGB0LAsIDI30KgiCg1grPJBFe0GcEI%2C&amp;z=16.94"
+                            frameborder="1" allowfullscreen="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__cell">
+                        <h3 class="footer__title h6">Контактная информация</h3>
+                        <ul>
+                            <li><a href="tel:+78123749999">+7 (812) 374-99-99 <br></a><a href="tel:+78124948815">+7 (812) 494-88-15 <br></a><a href="tel:+78123749991">+7 (812) 374-99-91 <br></a><a href="tel:+78123749979">+7 (812) 374-99-79</a>
+                            </li>
+                            <li><a href="mailto:info@energostm.ru">info@energostm.ru</a>
+                            </li>
+                            <li>Санкт-Петербург, вн. тер.
+                                <br>г. Муниципальный округ Светлановское,
+                                <br>пр-кт Энгельса, д. 27, лит. Ш</li>
+                            <li>Пн-Пт: с&nbsp;09:00 до&nbsp;18:00</li>
+                        </ul>
+                    </div>
+                    <div class="footer__cell">
+                        <h3 class="footer__title h6">Информация</h3>
+                        <ul>
+                            <li><a href="main.html">Главная</a>
+                            </li>
+                            <li><a href="about.html">О компании</a>
+                            </li>
+                            <li><a href="project.html">Проекты</a>
+                            </li>
+                            <li><a href="404.html">Новости</a>
+                            </li>
+                            <li><a href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__cell">
+                        <h3 class="footer__title h6">Услуги</h3>
+                        <ul>
+                            <li><a href="#">Проектирование</a>
+                            </li>
+                            <li><a href="#">Строительно-монтажные работы</a>
+                            </li>
+                            <li><a href="#">Строительство зданий</a>
+                            </li>
+                            <li><a href="#">Производство</a>
+                            </li>
+                            <li><a href="#">Аренда спецтехники</a>
+                            </li>
+                            <li><a href="#">Комплексное обслуживание ж/д и&nbsp;<br> гражданских объектов</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <p>© ООО «ЭнергоСтройМонтаж» 2023. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./app/js/app.js?v=1701427475618"></script>
+</body>
+
+</html>

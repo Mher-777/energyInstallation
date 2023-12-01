@@ -1,0 +1,63 @@
+.error-404 {
+  margin-top: 13rem;
+  padding: 4rem 0 12rem;
+  position: relative;
+  min-height: calc(100vh - 13rem);
+  @include large-desktop {
+    padding: 4rem 0 10rem;
+  }
+  @include large-tablet {
+    margin-top: 10rem;
+    padding: 4rem 0 7rem;
+    min-height: calc(100vh - 10rem);
+  }
+  @include large-mobile {
+    margin-top: 8rem;
+    padding: 2rem 0;
+    min-height: calc(100vh - 8rem);
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    width: 99.7rem;
+    z-index: -1;
+    @include large-desktop {
+      width: 80rem;
+    }
+    @include large-mobile {
+      width: 100%;
+      left: 0;
+    }
+  }
+  .container {
+    height: 100%;
+  }
+  &__code {
+    font-size: 30rem;
+    font-weight: 600;
+    line-height: .8em;
+    color: #E5EAED;
+    white-space: nowrap;
+    @include large-desktop {
+      font-size: 26rem;
+    }
+    @include large-mobile {
+      font-size: 17rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  &__text {
+    margin-top: .5rem;
+  }
+  &__btn {
+    border: 1px solid var(--color-primary);
+    margin-top: 2rem;
+  }
+}
