@@ -16,6 +16,14 @@ var sliders = {
         },
         hashNavigation: {
             watchState: true,
+            enabled: true,
+        },
+        breakpoints: {
+            580: {
+                hashNavigation: {
+                    enabled: false,
+                },
+            }
         }
     },
 

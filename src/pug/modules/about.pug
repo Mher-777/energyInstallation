@@ -4,7 +4,10 @@ section.about(id="section1")
             .about__cell.about__cell_left
               h2.about__title.h4.base-title(data-sub-title="кратко о нас") О компании «ЭнергоСтройМонтаж»
               .about__image
-                  img(src="/img/about-image-1.jpg" alt="image").object-fit
+                  if (!aboutContent)
+                    img(src="/img/about-image-1.jpeg" alt="image").object-fit
+                  else
+                    img(src="/img/about-image-2.jpeg" alt="image").object-fit
             .about__cell.about__cell_right
                 .about__content.content(class=(!aboutContent ? 'about__content_light' : ''))
                     if (!aboutContent)
@@ -27,5 +30,5 @@ section.about(id="section1")
                     ul.steps.about__steps
                         li.steps__item Строительство энергообъектов и пусконаладочные работы
                         li.steps__item Производство и поставка систем освещения;
-                        li.steps__item Производство и поставка приборов и систем пожарной сигнализации;
                         li.steps__item Аренда спецтехники
+                        li.steps__item Производство и поставка приборов и систем пожарной сигнализации;

@@ -54,6 +54,12 @@
     color: #999;
     @include line-height(13, 20);
     margin-bottom: 3rem;
+    a {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
     @include large-mobile {
       margin-bottom: 1rem;
     }

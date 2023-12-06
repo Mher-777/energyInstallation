@@ -98,7 +98,7 @@ module.exports = (gulp, plugins, browserSync) => {
 
 							template = `<picture>
 									<source type="image/webp" media="(max-width:580px)" srcset=${webpSrc.replace(/(.webp)/g, '_mobile.webp')}>
-									<source media="(max-width:580px)" srcset=${webpSrc.replace(/(.webp)/g, '_mobile.webp')}>
+									<source type="image/webp" srcset=${webpSrc}>
 		                            <img src=${src.replace('?mobile', '')} ${subAttr.join(" ")} />
 		                        </picture>`;
 						}
@@ -109,7 +109,7 @@ module.exports = (gulp, plugins, browserSync) => {
 				)
 				.pipe(
 					plugins.replace(
-						/(?:^|[^а-яёА-ЯЁ0-9_])(в|без|а|до|из|к|я|на|о|от|перед|при|через|с|у|за|над|об|под|про|для|и|или|со)(?:^|[^а-яёА-ЯЁ0-9_])/g,
+						/(?:^|[^а-яёА-ЯЁ0-9_])(в|без|а|до|из|к|я|на|о|от|перед|при|через|с|у|за|над|об|под|про|для|или|со)(?:^|[^а-яёА-ЯЁ0-9_])/g,
 						(match) => {
 							var newText =
 								match.slice(-1) == " "

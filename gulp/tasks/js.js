@@ -18,8 +18,23 @@ module.exports = (gulp, plugins, browserSync) => {
 				.pipe(
 					webpackStream({
 						mode: app.isBuild ? "production" : "development",
+
 						output: {
 							filename: "app.js",
+						},
+						module: {
+							rules: [
+								{
+									test: /\.js$/,
+									exclude: /node_modules\/(?!bullets-js)/,
+									use: {
+										loader: 'babel-loader',
+										options: {
+											presets: ["@babel/preset-env"]
+										}
+									}
+								}
+							]
 						}
 					})
 				)

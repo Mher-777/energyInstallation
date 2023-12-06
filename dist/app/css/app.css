@@ -2181,6 +2181,11 @@ video::-webkit-media-controls {
   color: var(--color-mine-shaft);
   line-height: 1.4117647059;
 }
+.steps__item:nth-child(3) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
 @media only screen and (max-width: 992px) {
   .steps__item {
     padding: 1.5rem;
@@ -2862,6 +2867,11 @@ video::-webkit-media-controls {
   line-height: 1.5384615385;
   margin-bottom: 3rem;
 }
+.contact-feedback__tagline a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
 @media only screen and (max-width: 580px) {
   .contact-feedback__tagline {
     margin-bottom: 1rem;
@@ -3037,6 +3047,11 @@ video::-webkit-media-controls {
   display: block;
   font-size: 1.3rem;
   color: rgba(185, 191, 195, 0.5);
+}
+.feedback__text a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 @media only screen and (max-width: 580px) {
   .feedback__text {
@@ -3305,6 +3320,13 @@ video::-webkit-media-controls {
 .header_white .logo {
   fill: var(--color-bg);
 }
+.header:not(.is-sticky) .header__btn {
+  color: var(--color-white);
+}
+.header:not(.is-sticky) .header__btn .b-circle {
+  border-color: var(--color-mirage);
+  background-color: var(--color-mirage);
+}
 .header.is-sticky {
   background-color: var(--color-mirage);
   color: var(--color-white);
@@ -3314,6 +3336,13 @@ video::-webkit-media-controls {
 }
 .header.is-sticky .logo__image {
   width: 8.6rem;
+}
+.header.is-sticky .menu__list > li:hover .dropdown {
+  top: calc(100% + 5.5rem);
+}
+.header.is-sticky .menu__list > li:hover .dropdown:before {
+  top: -5.5rem;
+  height: 5.5rem;
 }
 .header__inner {
   padding: 2.4rem 6.8rem;

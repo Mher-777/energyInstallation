@@ -39,10 +39,13 @@ class DynamicAdapt {
                      breakpoint
                  }) => breakpoint === mediaBreakpoint
             );
-            matchMedia.addEventListener('change', () => {
+            if (matchMedia?.addEventListener) {
+                matchMedia.addEventListener('change', () => {
+                    this.mediaHandler(matchMedia, оbjectsFilter);
+                });
+            } else {
                 this.mediaHandler(matchMedia, оbjectsFilter);
-            });
-            this.mediaHandler(matchMedia, оbjectsFilter);
+            }
         });
     }
 

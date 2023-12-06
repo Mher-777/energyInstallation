@@ -51,6 +51,12 @@
     display: block;
     font-size: 1.3rem;
     color: rgba(185, 191, 195, 0.50);
+    a {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
     @include large-mobile {
       margin-top: 2rem;
       @include line-height(12, 19)
